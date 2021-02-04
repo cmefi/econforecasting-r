@@ -2,16 +2,22 @@
 % Please edit documentation in R/scraping__getDataFred.R
 \name{getDataFred}
 \alias{getDataFred}
-\title{Load a Matrix}
+\title{Scrape data from FRED.}
 \usage{
 getDataFred(seriesId, apiKey, .freq = NULL, .returnVintages = FALSE)
 }
 \arguments{
-\item{infile}{Path to the input file}
+\item{seriesId}{(string) FRED ID of economic variable}
+
+\item{apiKey}{(string) User's FRED API Key}
+
+\item{.freq}{(string) One of 'd', 'm', 'q'. If NULL, returns highest available frequency.}
+
+\item{.returnVintages}{(boolean) If TRUE, returns all historic forecast values ('vintages').}
 }
 \value{
-A matrix of the infile
+A data frame of forecasts
 }
 \description{
-Load a Matrix
+Scrape data from FRED.
 }
