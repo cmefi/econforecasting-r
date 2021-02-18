@@ -9,9 +9,11 @@ diff(x, .l)
 \arguments{
 \item{x}{(numeric vector) A vector of data to be transformed}
 
-\item{.l}{(integer) Number of laggs for taking a difference}
+\item{.l}{(integer) Number of lags for taking a difference}
 
 \item{.length}{(integer) Length of lags for taking moving average}
+
+\item{.h}{(integer vector) Non-transformed vector of historical values for reversing transformations}
 }
 \description{
 Conducts common time series transformations - differencing, log-differencing, moving-averages, and lagged moving averages
