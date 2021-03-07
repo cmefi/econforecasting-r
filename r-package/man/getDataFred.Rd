@@ -2,14 +2,15 @@
 % Please edit documentation in R/scraping__getDataFred.R
 \name{getDataFred}
 \alias{getDataFred}
-\title{Scrape data from FRED.}
+\title{Returns data from St. Louis Federal Reserve Economic Database (FRED)}
 \usage{
 getDataFred(
   seriesId,
   apiKey,
   .freq = NULL,
   .returnVintages = FALSE,
-  .vintageDate = NULL
+  .vintageDate = NULL,
+  .verbose = FALSE
 )
 }
 \arguments{
@@ -22,10 +23,12 @@ getDataFred(
 \item{.returnVintages}{(boolean) If TRUE, returns all historic forecast values ('vintages').}
 
 \item{.vintageDate}{(date) If .returnVintages = TRUE, .vintageDate can be set to only return the vintage for a single date}
+
+\item{.verbose}{(boolean) If TRUE, returns boolean}
 }
 \value{
 A data frame of forecasts
 }
 \description{
-Scrape data from FRED.
+Returns data from St. Louis Federal Reserve Economic Database (FRED)
 }
