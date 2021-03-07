@@ -4,7 +4,13 @@
 \alias{getDataFred}
 \title{Scrape data from FRED.}
 \usage{
-getDataFred(seriesId, apiKey, .freq = NULL, .returnVintages = FALSE)
+getDataFred(
+  seriesId,
+  apiKey,
+  .freq = NULL,
+  .returnVintages = FALSE,
+  .vintageDate = NULL
+)
 }
 \arguments{
 \item{seriesId}{(string) FRED ID of economic variable}
@@ -14,6 +20,8 @@ getDataFred(seriesId, apiKey, .freq = NULL, .returnVintages = FALSE)
 \item{.freq}{(string) One of 'd', 'm', 'q'. If NULL, returns highest available frequency.}
 
 \item{.returnVintages}{(boolean) If TRUE, returns all historic forecast values ('vintages').}
+
+\item{.vintageDate}{(date) If .returnVintages = TRUE, .vintageDate can be set to only return the vintage for a single date}
 }
 \value{
 A data frame of forecasts
